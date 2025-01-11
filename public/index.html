@@ -2,18 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style/index.css">
     <title>Front-end</title>
 </head>
 <body>
     <main>
         <form id="form">
-            <p>Digite seu nome</p>
+            <h1 class="title">Bem vindo(a) a página que faz conexão com a API do repositório <a href="https://github.com/maicondougals/back-end" target="_blank" rel="noopener noreferrer">back-end</a>.</h1>
             <input type="text" id="name" placeholder="Insira seu nome">
-            <button type="submit">Enviar</button>
+            <button type="submit" id="botao">Enviar</button>
             <p id="status">Resultado:</p>
+            <h3 class="interroga" id="interroga">?</h3>
+            <div class="interroga-container" id="interroga-container">
+                <p>Ao digitar os dados e enviar, será mandado para uma API</p>
+            </div>
         </form>
+        
     </main>
 
 </body>
