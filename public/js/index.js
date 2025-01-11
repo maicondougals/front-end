@@ -31,7 +31,7 @@ form.addEventListener('submit', (event) => {
         }
     })
     .catch(error =>{
-        status.innerHTML = 'Resultado: Erro ao publicar nomeee!'
+        status.innerHTML = 'Resultado:O servidor está desligado no momento'
         console.log('error')
     })
 })
