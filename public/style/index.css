@@ -29,7 +29,7 @@ main form {
   border-left: 8px solid grey;
   width: 90vw;
   max-width: 500px;
-  height: 500px;
+  height: auto;
   gap: 20px;
   padding: 15px;
   border-radius: 14px;
