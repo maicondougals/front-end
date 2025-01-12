@@ -9,32 +9,35 @@ botao.addEventListener('mouseup', function() {
         botao.classList.remove('button-active'); 
     });
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value
-    const status = document.getElementById('status')
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
     
-    fetch('http://localhost:3333/users',{
-        method:'POST',
-        headers:{
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name: name})
-    })
-    .then(res => {
-        if(res.ok){
-            status.innerText = 'Resultado: nome adicionado ao banco de dados!'
-        }else{
-            status.innerText = 'Resultado: Erro ao publicar nome, muito curto'
-            console.log('error')
-        }
-    })
-    .catch(error =>{
-        status.innerHTML = 'Resultado:O servidor está desligado no momento'
-        console.log('error')
-    })
-})
+        const name = document.getElementById('name').value;
+        const mail = document.getElementById('mail').value;
+        const status = document.getElementById('status');
+        
+        fetch('http://localhost:3333/users',{
+            method:'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name: name, mail: mail}),
+        })
+        .then(res => {
+            if (res.ok) {
+                status.innerText = 'Resultado: Cadastrado com sucesso!!!';
+            } else {
+                // Captura a mensagem de erro do backend
+                return res.json().then(data => { 
+                    status.innerText = `Resultado: ${data.messagem}`; 
+                });
+            }
+        })
+        .catch(erro => {
+            status.innerHTML = `Resultado: O servidor está desligado no momento ${data.erro}`;
+            console.error('Erro:', erro);
+        });
+    });
 
 
 
