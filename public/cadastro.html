@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/cadastro.css">
     <title>Front-end</title>
 </head>
 <body>
     <main>
         <form id="form">
-            <h1 class="title">Bem vindo(a) a página que faz conexão com a API do repositório <a href="https://github.com/maicondougals/back-end" target="_blank" rel="noopener noreferrer">back-end</a>.</h1>
+            <h1 class="title">Bem vindo(a) a página de cadastro com a API do repositório <a class="link" href="https://github.com/maicondougals/back-end" target="_blank" rel="noopener noreferrer">back-end</a>.</h1>
             <input type="text" id="name" placeholder="Insira seu nome">
             <input type="text" id="mail" placeholder="Insira seu email">
-            <button type="submit" id="botao">Enviar</button>
+            <button type="submit" id="button" class="botao">Enviar</button>
+            <a href="http://127.0.0.1:5500/public/login.html" id="button" class="botao botao-2">Login</a>
             <p id="status">Resultado:</p>
             <h3 class="interroga" id="interroga">?</h3>
             <div class="interroga-container" id="interroga-container">
@@ -23,6 +24,6 @@
     </main>
 
 </body>
-<script src="js/index.js"></script>
+<script src="js/cadastro.js"></script>
 
 </html>

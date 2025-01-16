@@ -1,5 +1,5 @@
 const form = document.getElementById('form')
-const botao = document.getElementById('botao');
+const botao = document.getElementById('button');
 
 botao.addEventListener('mouseup', function() {
     botao.classList.add('button-active'); 
@@ -49,7 +49,7 @@ botao.addEventListener('mouseup', function() {
         if (erroEmail) {
         return status.innerText = `Resultado: ${erroEmail}`;
         }
-        fetch('http://localhost:3333/users', {
+        fetch('http://localhost:3333/cadastro', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -77,18 +77,18 @@ const interroga_btn = document.getElementById('interroga')
 
 interroga_btn.addEventListener('mouseover', function(){
     const interroga_container = document.getElementById('interroga-container')
-    console.log('deu')
+
     interroga_container.style.display = 'block'
 
 })
 interroga_btn.addEventListener('mouseout', function(){
     const interroga_container = document.getElementById('interroga-container')
-    console.log('deu')
+
     interroga_container.style.display = 'none'
     
 })
 interroga_btn.addEventListener('click', function(){
     const interroga_container = document.getElementById('interroga-container')
-    console.log('deu')
+
     interroga_container.classList.toggle('hiddle')
 })
